@@ -1,0 +1,25 @@
+# Binaries & Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+backend/bin/
+backend/dist/
+backend/data/
+
+# Node & Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel/
+frontend/*.tsbuildinfo
+
+# OS & Environment
+.DS_Store
+Thumbs.db
+.env
+.env.local
