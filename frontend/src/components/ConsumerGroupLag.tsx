@@ -113,3 +113,4 @@ export function ConsumerGroupLag({ groups }: ConsumerGroupLagProps) {
     </div>
   );
 }
+

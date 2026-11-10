@@ -78,3 +78,4 @@ type ClusterMetrics struct {
 	ActiveStreams int     `json:"active_streams"`
 	UptimeSeconds int64   `json:"uptime_seconds"`
 }
+

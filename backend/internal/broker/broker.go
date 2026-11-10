@@ -54,8 +54,8 @@ func NewBroker(db *storage.DB) (*Broker, error) {
 	if len(persistedTopics) == 0 {
 		log.Println("[Broker] No topics detected in database. Initializing default topics...")
 		defaults := map[string]int{
-			"orders.created":       3,
-			"payments.processed":   3,
+			"orders.created":      3,
+			"payments.processed":  3,
 			"notifications.email": 2,
 		}
 		for name, parts := range defaults {

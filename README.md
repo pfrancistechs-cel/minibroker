@@ -113,13 +113,16 @@ minibroker/
 ### 1. Database Setup (Choose Neon or Local Docker)
 
 #### Option A: Neon Cloud PostgreSQL
+
 Create a database on [Neon.tech](https://neon.tech) and copy your connection string (`sslmode=require`).
 
 #### Option B: Local Docker PostgreSQL
+
 ```bash
 docker-compose up -d
 ```
-*(Runs PostgreSQL 16 on `localhost:5434`)*
+
+_(Runs PostgreSQL 16 on `localhost:5434`)_
 
 ---
 
@@ -163,21 +166,22 @@ docker-compose up -d
 
 ## 📡 REST & Streaming API Reference
 
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/health` | Cluster health check |
-| `GET` | `/api/topics` | List all topics with partition summaries |
-| `POST` | `/api/topics` | Provision a new topic (`name`, `partitions`) |
-| `GET` | `/api/topics/{topic}` | Get topic partition watermarks |
-| `POST` | `/api/topics/{topic}/publish` | Produce message (`key`, `value`, `headers`) |
-| `GET` | `/api/topics/{topic}/partitions/{partition}/messages` | Batch consume messages (`offset`, `limit`) |
-| `GET` | `/api/topics/{topic}/stream` | **Server-Sent Events (SSE)** real-time stream |
-| `GET` | `/api/consumer-groups` | List consumer groups and partition lag |
-| `POST` | `/api/consumer-groups/{group}/offsets` | Commit consumer offset (`topic`, `partition`, `offset`) |
-| `GET` | `/api/metrics` | Instantaneous cluster metrics |
-| `GET` | `/api/metrics/stream` | **SSE Stream** of 1-second cluster telemetry |
+| Method | Endpoint                                              | Description                                             |
+| ------ | ----------------------------------------------------- | ------------------------------------------------------- |
+| `GET`  | `/health`                                             | Cluster health check                                    |
+| `GET`  | `/api/topics`                                         | List all topics with partition summaries                |
+| `POST` | `/api/topics`                                         | Provision a new topic (`name`, `partitions`)            |
+| `GET`  | `/api/topics/{topic}`                                 | Get topic partition watermarks                          |
+| `POST` | `/api/topics/{topic}/publish`                         | Produce message (`key`, `value`, `headers`)             |
+| `GET`  | `/api/topics/{topic}/partitions/{partition}/messages` | Batch consume messages (`offset`, `limit`)              |
+| `GET`  | `/api/topics/{topic}/stream`                          | **Server-Sent Events (SSE)** real-time stream           |
+| `GET`  | `/api/consumer-groups`                                | List consumer groups and partition lag                  |
+| `POST` | `/api/consumer-groups/{group}/offsets`                | Commit consumer offset (`topic`, `partition`, `offset`) |
+| `GET`  | `/api/metrics`                                        | Instantaneous cluster metrics                           |
+| `GET`  | `/api/metrics/stream`                                 | **SSE Stream** of 1-second cluster telemetry            |
 
 ---
 
 ## 📜 License
+
 MIT © pfrancistechs-cel
